@@ -1,0 +1,23 @@
+Text: Hello, world
+Text: Hello, STML
+Text: See Replacements<gh>
+Text: <a>gh<b> - "<gh>"
+Text: <a>a<b> - "<a>"
+Text: <a>b<b> - "<b>"
+Text: This code now ship with STTP, it's cool
+
+Hr: 1
+
+Text: Plans<gh>
+Text: [ ] Add Text1, Text2 and Text3 tags
+Text: [ ] Add Send button for send TextEntry
+Text: [ ] Add TextEntry
+Text: [ ] Add Images
+Text: [x] Fix hr
+Text: [x] Add Buttons<gh> Button, GButton
+Text: [x] Button<gh> Redirect to page
+Text: [x] GButton<gh> Redirect to page on another ip (GButton<gh> Click there<gh> 127.0.0.1<gh> 90<gh> /)
+Button: Click There: /i
+Button: Click There: /brug
+Button: This browser has not refresh, so Refresh button: /
+GButton: Click thereGlobal: 127.0.0.1: 90: /
