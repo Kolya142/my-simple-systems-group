@@ -1,0 +1,4 @@
+language: c++
+input: test-src/main.c
+output: test.exe
+run-after-build: true

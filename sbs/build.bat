@@ -1,0 +1,1 @@
+g++ src/* -o sbs.exe -std=c++17
