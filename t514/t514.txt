@@ -1,0 +1,63 @@
+t514
+
+instruction set:
+0x00 -- mov reg1, reg2
+0x01 -- movi reg, value
+0x02 -- movm address, reg
+0x03 -- movn reg, address
+0x04 -- movl address, value
+     -- 
+0x05 -- xor reg1, reg2
+0x06 -- or reg1, reg2
+0x07 -- and reg1, reg2
+     -- 
+0x08 -- add reg1, reg2
+0x09 -- sub reg1, reg2
+0x0a -- mul reg1, reg2
+0x0b -- div reg1, reg2
+0x0c -- mod reg1, reg2
+0x0d -- push reg
+0x0e -- pop reg
+     -- 
+0x0f -- jmp address
+0x10 -- call address
+0x11 -- jl address -- is lower
+0x12 -- jb address -- is bigger
+0x13 -- je address -- is equ
+     -- 
+0x14 -- jmpi reg
+0x15 -- calli reg
+0x16 -- jli reg
+0x17 -- jbi reg
+0x18 -- jei reg
+     -- 
+0x19 -- cmp r1, r2
+     -- 
+0x1a -- rnt address -- register int (ax - id)
+0x1b -- int id
+0x1c -- ret
+
+memory layout:
+(0x100 - 0x8d0) vga 80x25 console
+(0x9d0 - 0x109cf) stack 0xffff chars
+(0x109cf - 0x10fcf) 0x10000 bytes for program
+(0x209ce - 0xfffff) free memory 0xef030 bytes
+
+file formats:
+.t514 - source assembly code
+.t514o - compiled binary code
+.t514d - dump of memory and registers
+
+registers:
+ax, bx, cx, dx, ex, fx, gx, hx, ix, jx, kx, lx, mx, nx, ox, px, rx, sx, tx, ux, vx, wx, xx, yx, zx - 16 bit
+
+ah, bh, ch, dh, eh, fh, gh, hh, ih, jh, kh, lh, mh, nh, oh, ph, rh, sh, th, uh, vh, wh, hh, yh, zh - lower 8 bit
+
+al, bl, cl, dl, el, fl, gl, ll, il, jl, kl, ll, ml, nl, ol, pl, rl, sl, tl, ul, vl, wl, ll, yl, zl - high 8 bit
+
+compiler:
+instruction sheme:
+(opcode) (reg1 or const) (reg2 or const)
+register index - index in array of registers (0-78)
+example:
+movi dx, 0x40 - 0x01 0x03 0x40

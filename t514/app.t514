@@ -1,0 +1,11 @@
+movi dx, 0x01
+movi ax, 0x30
+movi cx, 10
+movi ex, 0x00
+:loop
+movi ax, 0x30
+add ex, dx
+; mod ex, cx
+add ax, ex
+movm bx, ax
+jmp loop

@@ -2,6 +2,5 @@
 ## languages - c#, rust, asm, python3
 ## currently:
 stml-sttp\
-small-os
-## in-work:
-t514
+small-os\
+t514(doent work)
